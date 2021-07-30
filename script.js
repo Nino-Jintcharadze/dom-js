@@ -22,3 +22,24 @@ document.querySelectorAll('.wraper').forEach( (item) => {
     item.appendChild(link);
 })
 document.querySelectorAll('.wraper')[0].appendChild(new_div);
+
+
+// events
+document.getElementById('btn').addEventListener('click', () => {
+    alert('Success!')
+})
+document.getElementById('btn').addEventListener('click', () => {
+    document.getElementById('btn').classList.toggle('new-class');
+})
+document.getElementById('inpt').addEventListener('keydown', (event) => {
+     if (event.which === 13) {
+         alert('You pressed enter!')
+     } else {
+         console.log('You didn\'t pressed enter');
+     }
+})
+
+document.getElementById('a').addEventListener('click', (event) => {
+    event.preventDefault();
+    alert('We stopped action')
+})
